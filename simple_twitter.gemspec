@@ -2,10 +2,10 @@
 require File.expand_path('../lib/simple_twitter/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["rmcaleavy"]
+  gem.authors       = ["Rob McAleavy"]
   gem.email         = ["rob@cardscreative.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Simple Twitter}
+  gem.summary       = %q{Ongoing Twitter Search Class Project}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
