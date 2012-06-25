@@ -5,7 +5,6 @@ require('httparty')
 class MockExampleTest < Test::Unit::TestCase
   def test_example_mocking
 
-<<<<<<< HEAD
     file_name = File.expand_path('../json/gaga.json', File.dirname(__FILE__))
     response = stub('response', :body => File.read(file_name))
     HTTParty.expects(:get).returns(response)
@@ -22,10 +21,4 @@ class MockExampleTest < Test::Unit::TestCase
     # specific example will work properly.
     #assert_equal(response, HTTParty.get('http://example.com'))
   end
-=======
-
-
-  end
-
->>>>>>> 8a5750d102e516bd511d245121729a06d846ac52
 end
