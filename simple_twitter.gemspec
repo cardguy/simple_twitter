@@ -1,3 +1,5 @@
+
+
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/simple_twitter/version', __FILE__)
 
