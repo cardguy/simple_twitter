@@ -1,15 +1,13 @@
 
-
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/simple_twitter/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Rob McAleavy"]
   gem.email         = ["rob@cardscreative.com"]
-  gem.description   = %q{Simple Twitter}
-  gem.summary       = %q{Ongoing Twitter Search Class Project}
-  gem.homepage      = ""
-
+  gem.description   = %q{Super simple class for searching Twitter.}
+  gem.summary       = %q{Shows how to search Twitter and work with JSON data.}
+  gem.homepage      = "https://github.com/cardguy/simple_twitter"
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
