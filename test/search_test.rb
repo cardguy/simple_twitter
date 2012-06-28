@@ -1,12 +1,12 @@
 require('test/unit')
 require('mocha')
-require('httparty')
+require('simple_twitter')
 
-class MockExampleTest < Test::Unit::TestCase
-  def test_example_mocking
+class SearchTest < Test::Unit::TestCase
+  def test_search_method
 
-    file_name = File.expand_path('../json/gaga.json', File.dirname(__FILE__))
-    response = stub('response', :body => File.read(file_name))
+    file_name = File.expand_path('gaga.json', File.dirname(__FILE__))
+    response = stub('response', :body => File.read(json_file))
     HTTParty.expects(:get).returns(response)
 
   # Test SimpleTwitter::Search#search
