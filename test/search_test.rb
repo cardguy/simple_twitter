@@ -5,7 +5,7 @@ require('simple_twitter')
 class SearchTest < Test::Unit::TestCase
   def test_search_method
 
-    file_name = File.expand_path('gaga.json', File.dirname(__FILE__))
+    json_file = File.expand_path('gaga.json', File.dirname(__FILE__))
     response = stub('response', :body => File.read(json_file))
     HTTParty.expects(:get).returns(response)
 
