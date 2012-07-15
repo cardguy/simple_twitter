@@ -1,8 +1,11 @@
 
+
+
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/simple_twitter/version', __FILE__)
 
 Gem::Specification.new do |gem|
+
   gem.authors       = ["Rob McAleavy"]
   gem.email         = ["rob@cardscreative.com"]
   gem.description   = %q{Super simple class for searching Twitter.}

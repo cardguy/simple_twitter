@@ -10,7 +10,5 @@ module SimpleTwitter
       @time   = tweet_hash['created_at']
       @avatar = tweet_hash['profile_image_url']
     end
-
   end
-
 end

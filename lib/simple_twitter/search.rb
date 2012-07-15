@@ -13,17 +13,20 @@ module SimpleTwitter
       @lang = "en"
     end
 
-
-    def search (query)
+    ############################################################################
+    # Returns a Hash from Twitter's search results JSON.
+    def search (search_term)
       params = {
-        :q => query,
+        :q   => search_term,
         :rpp => @results_per_page,
         :lang => @lang
       }
 
-
       response = HTTParty.get(SEARCH_URL, :query => params)
-      JSON.parse(response.body)
+      nasty_hash = JSON.parse(response.body)
+      nasty_hash['results'].map {|r| Tweet.new(r)}
+
+
     end
   end
 end
