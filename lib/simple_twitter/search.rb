@@ -5,11 +5,12 @@ module SimpleTwitter
     SEARCH_URL = "http://search.twitter.com/search.json"
 
 
-    attr_accessor(:results_per_page)
+    attr_accessor(:results_per_page, :lang)
 
 
     def initialize
       @results_per_page = 10
+      @lang = "en"
     end
 
 
@@ -17,6 +18,7 @@ module SimpleTwitter
       params = {
         :q => query,
         :rpp => @results_per_page,
+        :lang => @lang
       }
 
 
