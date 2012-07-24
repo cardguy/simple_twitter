@@ -6,12 +6,12 @@ module SimpleTwitter
 
 
     attr_accessor(:results_per_page)
-    attr_accessor(:lang)
+    attr_accessor(:language)
 
 
     def initialize
       @results_per_page = 10
-      @lang = "en"
+      @language = "en"
     end
 
     ############################################################################
@@ -20,7 +20,7 @@ module SimpleTwitter
       params = {
         :q      => search_term,
         :rpp    => @results_per_page,
-        :lang   => @lang
+        :lang   => @language
       }
 
       response = HTTParty.get(SEARCH_URL, :query => params)
