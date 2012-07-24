@@ -5,7 +5,8 @@ module SimpleTwitter
     SEARCH_URL = "http://search.twitter.com/search.json"
 
 
-    attr_accessor(:results_per_page, :lang)
+    attr_accessor(:results_per_page)
+    attr_accessor(:lang)
 
 
     def initialize
@@ -17,9 +18,9 @@ module SimpleTwitter
     # Returns a Hash from Twitter's search results JSON.
     def search (search_term)
       params = {
-        :q   => search_term,
-        :rpp => @results_per_page,
-        :lang => @lang
+        :q      => search_term,
+        :rpp    => @results_per_page,
+        :lang   => @lang
       }
 
       response = HTTParty.get(SEARCH_URL, :query => params)
